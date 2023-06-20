@@ -1,0 +1,410 @@
+###################Q1#########
+# import pentagon
+
+# for i in range (1, 101):
+#   print(pentagon.getPentagonalNumber(i))
+
+  
+###################Q2#######
+
+# def sumDigits (n):
+#   a = n //100
+#   b = n%100 //10
+#   c = n %10
+#   return(a+b+c)
+
+# number = eval(input("Enter a number: "))
+
+# print(sumDigits(number))
+
+#############Q3##########
+
+# def reverse (n):
+#   a = n //100
+#   b = n%100 //10
+#   c = n %10
+#   return(c*100 + b*10 +a)
+
+
+# def isPlindrome(n):
+#   return n == reverse(n)
+
+# print(isPlindrome(123))
+
+##############Q4###########
+# def reverse (n):
+#   a = n //1000
+#   b = n //100 %10
+#   c = n %100 //10
+#   d = n %100 %10
+#   print(a,b,c,d)
+#   return(d*1000 + c*100 + b*10 +a)
+
+
+# number = eval(input("Enter a number:"))
+# print(reverse(number))
+
+
+############Q5###########
+
+# def displaySortedNumbers(num1, num2, num3):
+#   if num1 > num2:
+#     num1, num2 = num2, num1
+#   elif num1 > num3:
+#     num1, num3 = num3, num1
+
+#   else:
+#     num2, num3 = num3, num2
+
+#   return(num1, num2, num3)
+
+# n1, n2, n3 = eval(input("Enter a number: "))
+
+# print(displaySortedNumbers(n1,n2,n3))
+
+
+############Q6#######
+
+
+
+# def displayPattern(n):
+#   for i in range(n):
+#     print(2* (n-1) * " ", end = " ")
+#     for j in range (i+1, 0,-1):
+#       print(j, end=" ")
+#     print()
+#     n -= 1
+
+# n = eval(input("Enter a number: "))
+
+# displayPattern(n)
+
+#(better way!!!!!)
+# n = 7
+# for i in range(n):
+#   word = ""
+#   for j in range(i+1, 0,-1):
+#     word +=str(j) + " "
+#   print(format(word, ">" + str(n * 2) + "s"))
+
+#################Q7######
+# years =0
+# def futureInvestmentValue(amount, rate, years):
+
+#   for i in range(1,years+1):
+#     futureInvestmentValue = amount * ((1+rate)**(12*i))
+#     years +=1
+#     return(futureInvestmentValue)
+
+# amount = eval(input("Enter an amount: "))
+# rate = eval(input("Enter your rates: "))
+
+# print(futureInvestmentValue(amount, rate,years))
+
+
+##############Q9#########
+
+# print("Feet" + "    " + "Meters" + "  " + "|" + "  " + "Meters" + "    " + "Feet")
+
+
+# def footToMeter(foot):
+#   return 0.305 * foot
+
+
+# def meterToFoot(meter):
+#   return meter / 0.305
+
+# foot = 1
+# meter = 20
+
+# while foot < 10 and meter < 66:
+#   print(format(foot,"4.1f") + 4 *" " + format(footToMeter(foot),"5.3f") + "   " + "|" + "  " + format(meter,"4.1f") + 6 *" " + format(meterToFoot(meter),"<5.3f"))
+#   foot +=1
+#   meter += 6
+
+#####################Q12#######
+# def printNums(num1, num2, numberPerLine):
+
+#   n = 0 
+#   for i in range(num1, num2 +1):
+#     print(i, end=" ")
+#     n+=1
+#     if n %numberPerLine ==0:
+#       print()
+
+# printNums(10,19,2)
+
+
+###########Q13###########
+# print("i" + 6*" " + "m(i)")
+
+# def m(i):
+#   sum = 0
+#   n =1
+#   while n != i:
+#     sum +=n/(n+1)
+#     n+=1
+#   return sum
+ 
+# i =1 
+# while i != 21:
+#   print(format(i, "<2d") + 4*" " + format(m(i+1), ".4f"))
+#   i +=1
+
+############Q10######
+# import PrimeNumberFunction as huni
+# n =0
+
+# for i in range (1,10001):
+#   # print(huni.isPrime(i))
+#   if huni.isPrime(i) == True:
+#     n+=1
+
+
+# print(n)
+
+def countDivisor(n):
+  count =0
+  for i in range (1, n):
+    if n % i ==0:
+      
+      count+=1 
+  return count
+
+def getPentagonalNumber(n):
+  return n*(3*n - 1)/2
+
+  def huni ():
+    print("Hello")
+
+def isPrime(number):
+  divisor = 2
+  while divisor <= number / 2:
+    if number % divisor == 0:
+
+      return False
+    divisor += 1
+
+  return True 
+
+
+#########Q16#######
+# def numberOfDaysInAYear(year):
+#   if year % 4 ==0:
+#     n = 366
+#   else:
+#     n = 365
+#   return n
+
+# total = 0 
+# for i in range (2010,2021):
+#   total +=   numberOfDaysInAYear(i)
+
+# print(total)
+
+#######Q17#######
+
+# import MyTriangle
+# side1, side2, side3 = eval(input("Enter three sides in double: "))
+
+# MyTriangle.isValid(side1, side2, side3)
+# print(MyTriangle.area(side1, side2, side3))
+
+############Q18########
+
+# import random
+
+
+# def printMatrix(n):
+#   for i in range (0,n):
+#     for j in range (0,n):
+#       number = random.randint(0,1)
+#       print(number,end=" ")
+#     print()
+
+
+
+# number = eval(input("Enter n: "))
+# printMatrix(number)
+
+###########Q24#######
+
+# def isPrime(number):
+#   divisor = 2
+#   while divisor <= number / 2:
+#     if number % divisor == 0:
+
+#       return False
+#     divisor += 1
+
+#   return True 
+  
+# def isPalindromic(number):
+#   return str(number) == str(number)[::-1]
+
+# # print(isPalindromic (121))
+# count =0
+# number =2 
+# for i in range(1,1001):
+#   if isPrime(number) and isPalindromic(number):
+#     count +=1
+#     print(number, end = " ")
+#     if count % 10 ==0:
+#       print()
+      
+#   number +=1
+
+###############Q28############
+# import random
+
+# a = random.randint(1,7)
+# b = random.randint(1,7)
+# c = a+b
+
+# if c==2 or c==3 or c==12:
+#   print(f"You rolled {a} + {b} = {c}")
+#   print("You lose haha! ")
+
+# if c==7 or c==11:
+#   print(f"You rolled {a} + {b} = {c}")
+#   print("You win!")
+
+# if c==4 or c==5 or c==6 or c==8 or c==9 or c==10:
+#   print(f"You rolled {a} + {b} = {c}")
+#   while c!=7:
+#     number1 =c 
+#     if c==number1:
+#       a = random.randint(1,7)
+#       b = random.randint(1,7)
+#       c = a+b
+#       print(f"You rolled {a} + {b} = {c}")
+#       print(f"Print is {c} double number")
+#       break
+#       if c==7:
+#         print("You win!")
+#       elif c==2 or c==3 or c==12:
+#         print("You lose haha! ")
+
+
+
+##############Q28##########teacher
+
+# import random
+# import time
+# def crap(n):
+#   time.sleep(1)
+
+#   first = random.randint(1,6)
+#   second = random.randint(1,6)
+#   sum = first + second
+
+#   print(f'You rolled {first} + {second} = {sum}')
+  
+#   if sum == n:
+#     print('Double Point !')
+#     print('You win')
+#   elif sum == 2 or sum == 3 or sum == 12:
+#     print('You lose')
+#   elif sum == 7 or sum == 11:
+#     print('You win')
+#   else:
+#     print(f'Point is {sum}')
+#     crap(sum)  
+
+
+# crap(-1)
+
+
+import math
+def isValid(side1, side2, side3):
+  if side1 + side2 < side3 or side2 + side3 < side1 or side1 + side3 < side2:
+    print("Input is invalid")
+
+def area(side1, side2, side3):
+  s = (side1 + side2 + side3) / 2
+  area = math. sqrt(s*(s - side1)*(s - side2)*(s - side3))
+
+  return area
+
+
+## Q30
+import play
+
+sum = 0
+trial = 100
+for i in range(trial):
+  sum += play.play(-1)
+import random
+
+def play(n):
+
+
+  first = random.randint(1,6)
+  second = random.randint(1,6)
+  sum = first + second
+
+  # print(f'You rolled {first} + {second} = {sum}')
+  
+  if sum == n:
+    # print('Double Point !')
+    # print('You win')
+    return 1
+  elif sum == 2 or sum == 3 or sum == 12:
+    # print('You lose')
+    return 0
+  elif sum == 7 or sum == 11:
+    # print('You win')
+    return 1
+  else:
+    # print(f'Point is {sum}')
+    return play(sum)  
+
+print(f"You won {sum} times out of {trial}. \nYour wining rate is {round(sum/trial * 100, 1)}%")
+
+######################### Check the card is valid or not
+
+def isValid(number):
+ # 13 - 16 digit
+  condition1 = 13 <= len(str(number)) <= 16
+ # pre-fix matching
+  condition2 = prefixMatched(number, 4) or prefixMatched(number, 5) or prefixMatched(number, 37) or prefixMatched(number, 6)
+ # even + odd divisible by 10
+  condition3 = (sumOfDoubleEvenPlace(number) + sumOfOddPlace(number)) % 10 == 0
+
+  return condition1 and condition2 and condition3
+
+def getDigit(number):
+  if number >= 10:
+    num1 = number // 10
+    num2 = number % 10 
+    number = num1 + num2
+  return number
+
+def sumOfDoubleEvenPlace(number):
+  sum = 0
+  for i in str(number)[-2::-2]:
+    a = int(i) * 2
+    sum += getDigit(a)
+  return sum
+
+def sumOfOddPlace(number):
+  sum = 0
+  for i in str(number)[-1::-2]:
+    sum += int(i)
+  return sum
+
+def getSize(d):
+  return len(str(d))
+
+def getPrefix(number, k):
+  return str(number)[:k]
+
+def prefixMatched(number, d):
+  return str(d) == getPrefix(number, getSize(d))
+
+
+number1 = 4388576018402626
+number2 = 4388576018410707
+
+print(isValid(number1))
+print(isValid(number2))
