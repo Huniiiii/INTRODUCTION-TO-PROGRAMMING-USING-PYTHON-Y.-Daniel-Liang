@@ -1,0 +1,318 @@
+# Celsius = eval(input("Enter a degree in Celsius: "))
+
+# Fahrenheit = (9 / 5) * Celsius + 32
+# print(f"{Celsius} Celsius is {Fahrenheit} Fahrenheit") #Q1
+
+# import math
+# radius = eval(input("Enter the radius of a cylinder: "))
+# length = eval(input("Enter the length of a cylinder: "))
+
+# area = radius * radius * math.pi
+# volume = area * length
+# print(f"The area is {area} The volume is {volume}.") #Q2
+
+# radius, length = eval(input("Enter the radius and length of a cylinder:"))
+# area = radius * radius * math.pi
+# volume = area * length
+# print(f"The area is {area} The volume is {volume}.") #Q2
+
+# feet = eval(input("Enter a value for feet: "))
+# meters = feet * 0.305
+# print(f"{feet} feet is {meters} meters") #Q3
+
+# pounds = eval(input("Enter a value in pounds: "))
+# kilograms = pounds * 0.454
+# print(f"{pounds} pounds is {kilograms} kilograms") #Q4
+
+# subtotal, gratuity = eval(input("Enter the subtotal and a gratuity rate:"))
+# afterGratuity = subtotal * gratuity *0.01
+# total =  afterGratuity + subtotal
+# print(f"The gratuity is {afterGratuity} and the total is {total}") #Q5
+
+# number = int(input("Enter a number between 0 and 1000:"))
+
+# digits =  number % 10 + number//10
+# print(f"The sum of the digits is {digits}") #Q6 wrong
+
+# number = int(input("Enter a number between 0 and 1000:"))
+# first = number // 100
+# sencond = (number //10)% 10
+# third = number % 10
+# sum = first + sencond + third
+# print(f"The sum of the digits is {sum}") #Q6
+
+# import turtle as t
+# number = eval(input("Enter the radius: "))
+# t.circle(number)
+# t.circle(-number)
+# t.penup()
+# t.goto(number,number)
+# t.pendown()
+# t.right(90)
+# t.circle(number)
+# t.penup()
+# t.goto(number*2,0)
+# t.pendown()
+# t.right(90)
+# t.circle(number) #Q23
+
+
+# number = eval(input("Enter the radius: "))
+# t.circle(number)
+# t.circle(-number)
+# t.penup()
+# t.backward(2*number)
+# t.pendown()
+# t.circle(number)
+# t.circle(-number) #Q23
+
+import turtle as t
+# x, y, w, h = eval(input("Enter the x, y, w and h: "))
+# t.penup()
+# t.goto(x,y)
+# t.pendown()
+# t.penup()
+# t.goto(-1/2w,-1/2h)
+# t.pendown()
+# t.right (90)
+# t.forward (h)
+# t.right(90)
+# t.forward (w)
+# t.right (90)
+# t.forward (h)
+# t.right(90)
+# t.forward (w)
+
+# mins = int(input("Enter the number of minutes: "))
+# hours = int (mins * 60)
+# days = int (hours * 60 * 24)
+# years = int (days * 365)
+# print(mins, hours, days, years)
+# numOfYears = mins / 60 / 24 / 365
+# numOfDay = mins / 60 /24 % 365
+# print(f"{mins} minutes is approximately {numOfYears} years and {numOfDay} days") ###Q7
+
+# kilograms = eval(input("Enter the amount of water in kilograms: "))
+# initialTemperature = eval(input("Enter the initial temperature: "))
+# finalTemperature = eval(input("Enter the final temperature: "))
+# print("I AM CALCULATE, CAN YOU WAIT!")
+# import time
+# time.sleep(3)
+# energy = kilograms * (finalTemperature - initialTemperature) * 4184
+# print(f"The energy needed is {energy}") ###Q8
+
+# temperature = eval(input("Enter the temperature in Fahrenheit between -58 and 41: "))
+# windSpeed = eval(input("Enter the wind speed in miles per hour: "))
+
+# chill = 35.74 + 0.6215 * temperature - 35.75 * windSpeed **0.16 + 0.4275 *temperature *windSpeed **0.16
+# print("I AM TRING NOW, CAN YOU WAIT!")
+# import time
+# time.sleep(3)
+# print(f"The wind chill index is {chill}") ###Q9
+
+# speed, acceleration = eval(input("Enter speed and acceleration: "))
+# length = (speed *speed) / (2*acceleration)
+# print(f"The minimum runway length for this airplane is {length} meters") ###Q10
+
+# finalAccountValue = eval(input("Enter final account value: "))
+# annualInterestRate =  eval(input("Enter annual interest rate in percent: "))
+# years =  eval(input("Enter number of years: "))
+# monthlyInterestRate  = (annualInterestRate / 12 ) /100
+# numberOfMonths = years * 12
+# initialDepositAmount = (finalAccountValue) / ((1 + monthlyInterestRate) **numberOfMonths)
+# print(f"Initial deposit value is {initialDepositAmount}")  #Q11
+
+
+# for i in range(1,6):
+#   print(i, end ="\t")
+#   print(i+1, end = "\t") 
+#   print(i ** (i +1))#Q12
+
+# number = (input("Enter an integer: "))
+
+# a = number[0]
+# b = number[1]
+# c = number[2]
+# d = number[3]
+# print(a)
+# print(b)
+# print(c)
+# print(d)
+
+# number = eval(input("Enter an integer: "))
+# a = number // 1000
+# b = (number // 100) % 10
+# c = (number // 10) % 10
+# d = number % 10 ##Q13
+
+
+# import math
+# x1, y1, x2, y2, x3, y3 = eval(input("Enter three points for a triangle: "))
+# side1 = math.sqrt(((x2 - x1)**2) + ((y2 - y1)**2))
+# side2 = math.sqrt(((x2 - x3)**2) + ((y2 - y3)**2))
+# side3 = math.sqrt(((x3 - x1)**2) + ((y3 - y1)**2))
+# s = (side1 + side2 + side3) / 2
+# area =  math.sqrt(s * (s - side1) * (s - side2) * (s - side3))
+# print (area)#Q14
+
+
+# side = eval(input("Enter the side: "))
+# areaHexagon =  ((3 * math.sqrt(3) / 2) * side * side)
+# print (f"The area of the hexagon is {areaHexagon}") ##Q15
+
+# v0, v1, t = eval(input("Enter v0, v1, and t: "))
+# a = ((v1 - v0) / t)
+# print (f"The average acceleration is {a}") ##Q16
+
+# pound = eval(input("Enter weight in pounds: "))
+# inches = eval(input("Enter height in inches: "))
+# kilograms = pound * 0.45359237
+# meters =  inches * 0.0254
+# bmi = ((kilograms) / (meters **2 ))
+# print (f"BMI is {bmi}") ##Q17
+
+
+# import time
+
+# currentTime = time.time()
+
+# totalSeconds = int(currentTime)
+
+# currentSecond = totalSeconds % 60
+
+# totalMinutes = totalSeconds // 60
+
+# currentMinute = totalMinutes % 60
+
+# totalHours = totalMinutes // 60
+
+# currentHour = totalHours % 24
+
+# user = int(input("Enter the time zone offset to GMT: "))
+
+# currentHourNow = currentHour + user
+
+# print(f"Current time is {currentHourNow}: {currentMinute}:{currentSecond}, GMT")  ##Q18
+
+# investmentAmount = eval(input("Enter investment amount: "))
+# annualInterestRate = eval(input("Enter annual interest rate: "))
+# years = eval(input("Enter number of years: "))
+
+# monthlyInterestRate  = (annualInterestRate / 12 ) /100
+
+# futureInvestmentValue = (investmentAmount * (1 + monthlyInterestRate) ** 12)
+# print(f"Accumulated value is {futureInvestmentValue}") #Q19
+
+# balance, interest=eval(input("Enter balance and interest rate: "))
+
+# annualInterestRate = interest
+
+# newInterest = (balance * (annualInterestRate / 1200))
+
+# print(f"The interest is {newInterest}") #Q20
+
+# saving = eval(input("Enter the monthly saving amount: "))
+# interestRate = (1+0.00417)
+# firstMonth = saving * interestRate
+
+# secondMonth = (saving + firstMonth) * interestRate
+
+# thirdMonth = (saving + secondMonth) * interestRate
+
+# fourMonth = (saving + thirdMonth) * interestRate
+
+# fiveMonth = (saving + fourMonth) * interestRate
+
+# sixMonth = (saving + fiveMonth) * interestRate
+
+# print(f"After the sixth month, the account value is {sixMonth}") #Q21
+
+# pop_current = 312_032_486
+# years = eval(input("Enter the number of years: "))
+
+# birth = years//7
+
+# death = years//13
+
+# newImmigrant = years //45
+
+# change = birth - death + newImmigrant
+
+# print (pop_current + 5 * change) #Q22
+
+import turtle as t
+
+# t.penup()
+# t.goto(-50,50)
+# t.pendown()
+# t.circle(50)
+
+# t.penup()
+# t.goto(50,50)
+# t.pendown()
+# t.circle(50)
+
+# t.penup()
+# t.goto(-50,-50)
+# t.pendown()
+# t.circle(50)
+
+# t.penup()
+# t.goto(50,-50)
+# t.pendown()
+# t.circle(50)
+
+# t.done() #Q23
+
+# t.penup()
+# t.goto(-50,-50)
+# t.pendown()
+# t.circle(50,steps = 6)
+
+# t.penup()
+# t.goto(50,50)
+# t.pendown()
+# t.circle(50,steps = 6)
+
+# t.penup()
+# t.goto(-50,50)
+# t.pendown()
+# t.circle(50,steps = 6)
+
+# t.penup()
+# t.goto(50,-50)
+# t.pendown()
+# t.circle(50,steps = 6)
+
+# t.done() #Q24
+
+# x,y,width,height = eval(input("Please enter x,y , width and height: "))
+# t.penup()
+# t.goto(x-width/2, y-height/2)
+# t.pendown()
+# t.forward(width)
+# t.left(90)
+# t.forward(height)
+# t.left(90)
+# t.forward(width)
+# t.left(90)
+# t.forward(height)
+# t.left(90) #Q 25
+
+import math
+x,y,radius = eval(input("Enter the x, y and radius of a circle: "))
+
+print(x,y,radius)
+area = radius **2 * math.pi
+
+t.penup()
+t.goto(x,y)
+
+t.write (area)
+
+t.pendown()
+t.circle(radius)
+
+t.done() #Q26
+
+
