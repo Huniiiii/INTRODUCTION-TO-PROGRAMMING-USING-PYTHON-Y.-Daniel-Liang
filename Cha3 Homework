@@ -1,0 +1,132 @@
+# import math
+# length = eval(input("Enter the length from the center to a vertex: "))
+
+# s=2 * length * math.sin(math.pi/5)
+# area = 3 *(3**0.5)/2*(s**2)
+
+# print(f"The area of the pentagon is {round(area, 2)}") #Q1
+
+# x1,y1 = eval(input("Enter point 1 (latitude and longitude) in degrees: "))
+
+# x2,y2 = eval(input("Enter point 2 (latitude and longitude) in degrees: "))
+
+
+# x1,x2,y1,y2 = math.radians(x1), math.radians(x2),math.radians(y1),math.radians(y2)
+
+# radius = 6_371.01
+# d = radius * math.acos(math.sin(x1) * math.sin(x2) +math.cos(x1) * math.cos(x2) *math.cos(y1 - y2))
+
+# print(f"The distance between the two points is {d}") #Q2
+
+# side = eval(input("Enter the side: "))
+
+# area =  (5 * side **2) / (4 * math.tan(math.pi/5))
+
+# print(f"The area of the pentagon is {area}") #Q4
+
+# numberOfSide = eval(input("Enter the number of sides: "))
+# side = eval(input("Enter the side: "))
+
+# area = (numberOfSide * side **2)/(4 * math.tan(math.pi/numberOfSide))
+
+# print(f"The area of the polygon is {area}") #Q5
+
+# number = int(input("Enter an ASCII code: "))
+
+# code = chr(number)
+
+# print(f"The character is {code}") #Q6
+
+# import time
+# print(ord("A"))
+# print(ord("Z"))
+# print(chr(round(time.time()%10 +70))) #Q7
+
+# amount = eval(input("Enter an amount: ")) / 100
+
+# remainingAmount = int(amount *100 )
+
+# numberOfDollars = remainingAmount //100
+# remainingAmount = remainingAmount %100
+
+# print(f" {numberOfDollars} dollars and {remainingAmount} cents.") #Q8
+
+# name = input("Enter employee's name: ")
+# numberOfHour = eval(input("Enter number of hours worked in a week: "))
+# payRate = eval(input("Enter hourly pay rate: "))
+# federalTaxRate = eval(input("Enter federal tax withholding rate: "))
+# stateTaxRate = eval(input("Enter state tax withholding rate: "))
+
+# grossPay = payRate * numberOfHour
+
+# print(f"Employee Name {name}")
+# print(f"Hours Worked {numberOfHour}")
+# print(f"Pay Rate:{payRate}")
+# print(f"Gross Pay: {grossPay}")
+
+# federalWithholding = grossPay * federalTaxRate
+# stateWithholding = grossPay * stateTaxRate
+# totalDedction = federalWithholding + stateWithholding
+# netPay = grossPay - totalDedction
+# print("Deductions: ")
+# print(f"\tFedeal Withholding{federalTaxRate}% : ${federalWithholding}")
+# print(f"\tState Withholding {stateTaxRate}% : ${stateWithholding}")
+# print(f"\nTotal Deduction${federalWithholding}")
+# print(f"Net pay: ${netPay}") #Q9
+
+number = input("Enter an integer: ")
+
+print(f"The reversed number is {number[::-1]}")
+
+number1 = number // 1000
+number2 = number % 100
+
+print(number[0])
+
+import turtle as t
+# length = eval(input("Enter the leght:"))
+
+# t.forward(length)
+# t.right(144)
+# t.forward(length)
+# t.right(144)
+# t.forward(length)
+# t.right(144)
+# t.forward(length)
+# t.right(144)
+# t.forward(length)
+# t.right(144)
+
+# t.done() #Q12
+
+t.color("blue")
+t.penup()
+t.goto(-100,-25)
+t.pendown()
+t.circle(50)
+
+t.color("black")
+t.penup()
+t.goto(0,-25)
+t.pendown()
+t.circle(50)
+
+t.color("red")
+t.penup()
+t.goto(100,-25)
+t.pendown()
+t.circle(50)
+
+t.color("yellow")
+t.penup()
+t.goto(-50,-75)
+t.pendown()
+t.circle(50)
+
+t.color("green")
+t.penup()
+t.goto(50,-75)
+t.pendown()
+t.circle(50)
+
+t.done() #Q14
