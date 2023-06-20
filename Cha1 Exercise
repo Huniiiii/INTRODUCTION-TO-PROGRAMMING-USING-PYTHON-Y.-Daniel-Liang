@@ -1,0 +1,66 @@
+
+##comment
+# one - line
+
+'''
+
+print ("Huni")
+
+'''
+
+# yieldf
+# sd
+# d
+# f
+## ctrl + / ##
+
+
+print(3+4-3)
+print(3 + 4 - 3)
+
+#print(3/0) ## runtime erros
+
+radius = 5
+area = 3.14 * radius **2  #mean that radius^2#
+print(area)
+
+
+
+import turtle
+turtle.showturtle()
+# turtle.forward(50)
+# turtle.left(90)
+# turtle.forward(50)
+
+
+turtle.color("blue")
+turtle.penup()
+turtle.goto(-110,-25)
+turtle.pendown()
+turtle.circle(45)
+
+turtle.color("black")
+turtle.penup()
+turtle.goto(0,-25)
+turtle.pendown()
+turtle.circle(45)
+
+turtle.color("red")
+turtle.penup()
+turtle.goto(110,-25)
+turtle.pendown()
+turtle.circle(45)
+
+turtle.color("yellow")
+turtle.penup()
+turtle.goto(-55,-75)
+turtle.pendown()
+turtle.circle(45)
+
+turtle.color("green")
+turtle.penup()
+turtle.goto(55,-75)
+turtle.pendown()
+turtle.circle(45)
+
+turtle.done()
