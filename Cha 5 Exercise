@@ -1,0 +1,116 @@
+
+# print("Kilograms" + "    " + "pounds")
+
+# i = 1
+# while i < 120:
+#   print(format(i,"<9d") + " " *4 + format(i*2.2,"6.1f"))
+
+#   i+=2
+
+print("Miles" + "    " + "Kilograms   " + "|" + "   Kilograms" + "    " + "miles")
+
+i = 1
+k =20
+while i <=10 and k <= 65:
+  print(format(i,"<5d") + " " *4 + format(i*1.609,"<9.3f") + "   |   " + format(k,"<9d") + "    " + format(k*0.621,"<5.3f"))
+  i +=1
+  k +=5
+
+
+
+################ for loop ###############
+
+for i in range(1,10):
+  print("Hello")
+
+for i in "Hello":
+    print("hellp")
+
+for i in range (10,1, -1):
+  print(i)
+
+number1 = eval(input("Enter your number: "))
+
+# if number1 %2 ==1:
+#   number1 = eval(input("Enter your number again: "))
+
+# elif number1 %2 != 1:
+#   print("Even")
+
+while True:
+  number1 = eval(input("Enter your number: "))
+  if number1 %2 ==0:
+    break
+
+print(f"{number1} is even!")
+
+############################################
+sum = 0
+number = 0
+while number < 20:
+  number += 1
+  sum += number
+  if sum >= 100:
+      break
+print("The number is", number)
+print("The sum is", sum)
+
+sum = 0
+number = 0
+
+while number < 20:
+    number += 1
+    if number == 10 or number == 11:
+      sum += number
+
+print("The sum is", sum)
+#############################################
+
+# a = 0
+
+# while a <=5:
+#   print("Huni is Huni")
+
+#   a += 1  # a = a +1
+
+
+# import random 
+# number1 = random.randint(0, 9)
+# number2 = random.randint(0, 9)
+
+# if number1 < number2:
+#   number1, number2 = number2, number1
+
+# answer = eval(input("What is " + str(number1) + " - " + str(number2) + "? "))
+
+# while number1 - number2 != answer:
+#   answer = eval(input("Wrong answer. Try again. What is "+ str(number1) + " - " + str(number2) + "? "))
+
+# print("You got it")
+
+# import random 
+# number1 = random.randint(0, 100)
+# users = eval(input("Guess a magic number between 0 and 100: "))
+
+# while users != number1:
+#   if users > number1:
+#     print("Your guess is too high")
+#   elif users < number1:
+#     print("Your guess is too low")
+#   users = eval(input("Guess new a magic number between 0 and 100: "))
+
+# print(f"Yes, the number is {users}")
+
+
+data = eval(input("Enter: "))
+
+sum = 0
+
+while data != 0:
+  sum += data 
+  
+  data = eval(input("Enter: "))
+
+print("The sum is", sum)
+#############################################
+
