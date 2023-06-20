@@ -1,0 +1,277 @@
+# scores = input("Enter scores: ")
+# scores = scores.split(' ')
+# x =0
+# k =0
+# scores.sort()
+# largest = scores[-1]
+
+
+
+# for i in range(scores):
+
+#   if scores [x] >=largest -10:
+    
+#     print(f"Student {k} scores is {x} and grade is A")
+
+#   elif scores [x] >=largest -20:
+#     print(f"Student {k} scores is {x} and grade is b")
+
+#   elif scores [x] >=largest -30:
+#     print(f"Student {k} scores is {x} and grade is c")
+
+
+############## (better version) Q1
+
+# scores = input("Enter scores: ")
+
+# scores = scores.split(" ")
+
+# print(scores)
+
+# scores = [int(x) for x in scores]
+
+# best = max(scores)
+# grade = []
+
+# for i in scores:
+#   if i >= best - 10:
+#     grade.append("A")
+#   elif i >= best - 20:
+#     grade.append("B")
+#   elif i >= best - 30:
+#     grade.append("C")
+#   elif i >= best - 40:
+#     grade.append("D")
+#   else:
+#     grade.append("F")
+
+# print(grade)
+
+# print(i)
+# number = [1,2,3,4,5,6,7,8,9,10]
+
+
+# for i in range (len(scores)):
+#   print(f"Student {i+1} socre is {scores[i]} and grade is {grade[i]}")
+
+
+
+
+####Q2
+
+# mylist = input("Please enter: ").splist(" ")
+
+# print(mylist)
+
+# mylist = [int(i) for i in mylist]
+
+# print(mylist)
+
+# mylist.reverse()
+# print(mylist)
+# number = input("Enter integers between 1 and 100: ")
+
+
+# number = [int(x) for x in number]
+
+# for i in range (len(number)):
+#   if number.count(1):
+
+
+#############Q3
+
+mylist = input("Enter integers between 1 and 100: ").split(" ")
+
+counted = []
+
+mylist = [int(i) for i in mylist]
+
+for i in mylist:
+  if i not in counted:
+    counted.append(i)
+
+print(counted)
+print(f"Original list: {mylist}")
+print(f"Unique List: {counted}")
+
+for i in range(len(mylist)):
+  print(mylist[i], end = ": ")
+  for j in range(i+1, len(mylist)):
+    print(mylist[j], end = " ")
+  print()
+
+########################################
+
+###Q1
+# scores = input("Enter your scores: ").split(" ")
+
+# best = int(max(scores))
+
+
+# print(scores)
+# print(best)
+# print(int(scores[1]))
+
+# for i in range (len(scores)):
+#   if int(scores[i]) >= best -10:
+#     print(f"Student {i} socres is {scores[i]} and grade is A")
+#   elif int(scores[i]) >= best -20:
+#     print(f"Student {i} socres is {scores[i]} and grade is B")
+#   elif int(scores[i]) >= best -30:
+#     print(f"Student {i} socres is {scores[i]} and grade is C")
+#   elif int(scores[i]) >= best -30:
+#     print(f"Student {i} socres is {scores[i]} and grade is C")
+#   elif int(scores[i]) >= best -40:
+#     print(f"Student {i} socres is {scores[i]} and grade is D")
+
+##Q2
+
+
+# numbers = input("Enter integers between 1 and 100: ").split(" ")
+
+# numbers = [2,4,5,6,4,3,4,5,6,2]
+# for i in range(len(numbers)):
+#   numbers[i] = int(numbers[i])
+
+# numbers = [int(number) for number in numbers] ##
+
+
+#unique_numbers = set(numbers)
+
+# unique_numbers = []
+
+# for number in numbers:
+#   if number not in unique_numbers:
+#     unique_numbers.append(number)
+
+# unique_numbers.sort()
+
+
+# for i in unique_numbers:
+#   print(f'{i},{numbers.count(i)}')
+
+
+########Q5
+# numbers = input("Enter integers between 1 and 100: ").split(" ")
+# numbers = [int(number) for number in numbers]
+# unique_numbers = []
+
+# for number in numbers:
+#   if number not in unique_numbers:
+#     unique_numbers.append(number)
+
+
+###############Q7
+# import random
+
+
+# huniList = []
+# for i in range(1_000):
+#   huniList.append(random.randint(0,9))
+# print(len(huniList))
+
+# for i in range(10):
+#   print(f'{i},{huniList.count(i)}')
+
+
+
+################Q15
+# lsts = input("Enter your list: ").split(" ")
+# lsts = [int(lst) for lst in lsts]
+
+# for i in range(len(lsts)-1):
+#   if lsts[i] <= lsts[i+1]:
+#     print("True")
+#   else:
+#     print("False")
+
+####################Q24
+
+# lsts = input("Enter your number: ").split(" ")
+
+# lsts = [int(lst) for lst in lsts]
+# # print(lsts)
+
+# numbers = []
+
+# for i in lsts:
+#   if i not in numbers:
+#     numbers.append(i)
+
+# print(numbers)
+
+# for i in range(len(numbers)):
+#   for j in range (i+1,len(numbers)):
+#     print(numbers[i],numbers[j])
+
+####Q25
+# import random
+# heart = []
+# diamond = []
+# clover = []
+# spade = []
+
+# for i in range(1,14):
+#   heart.append(i)
+#   diamond.append(i)
+#   clover.append(i)
+#   spade.append(i)
+
+
+# cards = [heart, diamond, clover, spade]
+
+# picking 1 single card from card deck
+# for i in range(4):
+#   shape = random.randint(0,3)
+#   if shape == 0:
+#     print("Heart", end=" ")
+#   elif shape == 1:
+#     print("Diamond", end=" ")
+#   elif shape == 2:
+#     print("Clover", end=" ")
+#   else:
+#     print("Spade", end=" ")
+    
+#   card = random.randint(0,12)
+
+#   print(cards[shape][card])
+
+# shape_dict = {0: "Heart",
+#               1: "Diamond",
+#               2: "Clover",
+#               3: "Spade"}
+              
+# for i in range(4):              
+#   shape = random.randint(0,3)
+#   card = random.randint(0,12)
+#   print(shape_dict[shape],cards[shape][card])
+
+#######Q26
+# list1 = [1,2,3,4]
+# list2 = [5,6,7,8]
+
+# # list3= [1,2,3,4,5,6,7,8]
+# list3 = list1 + list2
+# # list3.extend(list1)
+# # list3.extend(list2)
+# print(list3)
+
+################ Q29
+import random
+
+words = ["a", "ab", "abc", "abcd", "abcde", "abcdef"]
+word_idx = random.randint(0, len(words)-1)
+
+answer = words[word_idx]
+guessHide = "*" * len(answer)
+
+guess = input(f"Enter a letter in word {guessHide} : ")
+
+while True:
+  if guess in answer:
+    guessHide[answer.find(guess)] = guess
+    newGuess = guess.replace(guessHide,guess)
+    answer.append(newGuess)
+    guessHide = "*" * len(answer)
+    guess = input(f"Enter a letter in word {guessHide} : ")
+
