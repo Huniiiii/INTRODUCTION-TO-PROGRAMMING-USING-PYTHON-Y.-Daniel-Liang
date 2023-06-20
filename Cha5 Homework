@@ -1,0 +1,318 @@
+# number = eval(input("Enter an integer, the input ends if it is 0: "))
+
+# sum = 0
+# potnumber = 0 
+# negnumber = 0 
+
+# if number == 0:
+#   print("You didn't enter any number.") 
+
+# else:
+#   while number != 0:
+#     sum += number 
+  
+#     if number > 0:
+#       potnumber += 1
+
+#     elif number < 0:
+#       negnumber += 1
+
+#     number = eval(input("Enter an integer, the input ends if it is 0: "))
+#   average = sum / (potnumber + negnumber)
+#   print(f"The number of positives is {potnumber}")
+#   print(f"The number of negatives is {negnumber}")
+#   print(f"The sum is {sum}")
+#   print(f"The average is {average}")  ##Q1
+
+
+# import random 
+# number1 = random.randint(0, 9)
+# number2 = random.randint(0, 9)
+
+# if number1 < number2:
+#   number1, number2 = number2, number1
+
+# answer = eval(input("What is " + str(number1) + " - " + str(number2) + "? "))
+
+# while number1 - number2 != answer:
+#   answer = eval(input("Wrong answer. Try again. What is "+ str(number1) + " - " + str(number2) + "? "))
+
+# print("You got it")   ##Q2
+
+
+# print("Kilograms     Pronds")
+# n =1 
+# while n < 200:
+#   print(f"{n}             {round(n * 2.2,2)}")
+#   n += 2  ##Q3
+
+# print("Miles     Kilometers")
+# n =1 
+# while n < 200:
+#   print(f"{n}             {round(n * 1.609,2)}")
+#   n += 1  ##Q4
+
+# print("Kilograms     Pounds    /  Pounds     Kilograms")
+# n =1 
+# a = 20
+# while n < 200:
+#   print(f"{n}             {round(n *  2.2,2)}       /  {a}          {round(a *  0.45,2)}")
+#   a +=5
+#   n += 2  ##Q5
+################################################
+
+###############Q9#########
+# tuition = 10000
+# total = 0
+
+# for i in range (0,15):
+#   tuition += tuition * 0.05
+
+#   if i == 10:
+#     print(tuition)
+
+#   elif i > 10:
+#     total += tuition
+#     print(total)
+
+############Q10########
+# a = eval(input("Enter number of the students: "))
+
+# hughtest = 0
+# lowest = 100
+# scoreOfStudents = 0
+
+# for i in range (1,a+1):
+#   scoreOfStudents = eval(input("Enter the scores: "))
+
+#   if scoreOfStudents > hughtest:
+#     hughtest = scoreOfStudents
+
+#   if scoreOfStudents < lowest:
+#     lowest = scoreOfStudents
+
+# print(hughtest, lowest)
+
+##########Q11#########
+# a = eval(input("Enter number of the students: "))
+
+# hughtest = 0
+# second = 0
+# scoreOfStudents = 0
+
+# for i in range (1,a+1):
+#   scoreOfStudents = eval(input("Enter the scores: "))
+
+#   if a >1:
+#     if scoreOfStudents > second:
+#       second = scoreOfStudents
+#       if scoreOfStudents >
+
+#   if scoreOfStudents < second:
+#     lowest = scoreOfStudents
+
+# print(hughtest, second)
+
+#################Q11###############
+# first = 0
+# second = 0
+
+# nStudent = eval(input("Number of studnets: "))
+
+# for i in range(nStudent):
+#   score = eval(input("Enter the scores: "))
+#   if score > first and score > second:
+#     second = first
+#     first = score
+#   elif score > second:
+#     second = score
+
+
+# print(first,second)
+
+
+##################Q12#############
+
+
+# count = 0
+# for i in range (100,1001):
+#   if i % 5 ==0 and i % 6 ==0:
+#     count +=1
+
+#     if count % 10 ==0:
+#       print(i)
+#     else:
+#       print(i,end = " ")
+
+############Q13##########
+
+# count = 0
+# for i in range (100, 201):
+#     if (i % 6== 0 and i % 5 !=0) or (i % 5== 0 and i % 6 !=0):
+#       count +=1
+
+#       if count % 10 ==0:
+#         print(i)
+#       else:
+#         print(i,end = " ")
+
+###################Q14##############
+
+# n = 0
+
+# while n **2 <12000:
+#   n+=1
+
+# print(n)
+
+#################Q15##############
+# n = 0
+
+# while n **3 <12000:
+#   n+=1
+
+# print(n-1)
+
+###########Q18#########
+
+# number = eval(input("Please Enter a number: "))
+
+# factor = 2
+
+
+# while number % 2 == 0:
+#   print(2)
+#   number = number / factor
+
+# print(number)
+
+# for i in range(3, int(number +1)):
+#   while number % i ==0:
+#     print(i)
+#     number = number /i
+
+###########Q26#########
+# a=1
+# b=3
+# sum =0
+
+# while a < 98 or b < 100:
+#   sum += a/b
+#   a+=2
+#   b+=2
+
+# print(sum)
+
+##############Q22###########
+# n = eval(input("Please enter an integer: "))
+
+# count = 0
+# for i in range (2, n):
+#   if n % i ==0:
+#     count += 1
+#     break
+
+# if count == 0:
+#     print("It is a prime number")
+  
+
+# for n in range (2,1001): 
+#   count = 0
+#   for i in range (2, n):
+#     if n % i ==0:
+#       count += 1
+#       break
+
+#   if count == 0:
+#     print(f"{n} It is a prime number")
+
+#############Q38##########
+
+import time
+
+times = eval(input("Enter the number of seconds: "))
+
+for i in range (times, 0,-1):
+  print(i)
+  time.sleep(1)
+  i+=1
+
+print("stopped")
+
+################################################
+
+##########Q41#######
+
+number =1 
+count = 0
+maxnNumber =0
+
+while number !=0:
+  number = eval(input("Enter a number (0: for end of input): "))
+
+  if number >maxnNumber:
+    maxnNumber = number
+    count=1
+
+  elif number==maxnNumber:
+    count+=1
+
+print(maxnNumber,count)
+
+
+############Q37########
+# import math
+# sum = 0
+# for i in range (1,625):
+#   sum += 1/(math. sqrt(i)) +1/ (math. sqrt (i+1))
+
+# print(sum)
+
+
+
+###############Q35######
+
+# sum =0
+# for i in range (1, 10001):
+#   for i in range (1,n):
+#     if n %i ==0:
+#       sum+=i
+# if sum ==n:
+#       print(n)
+
+
+
+
+    
+######Q25#########
+
+# number = 100000000
+# sum =0
+# for i in range(1,number):
+#   sum +=1/i
+# print(sum)
+
+# sum =0
+# for i in range(1,50001):
+#   sum += 1/i
+
+# print(sum)
+
+# sum = 0
+# for i in range(50_001,0, -1):
+#   sum += 1/i
+
+# print(sum)
+
+###################Q35##########
+# n = eval(input("Please enter a number: "))
+# sum =0
+# for i in range (1, n):
+#   if n % i ==0:
+#     print(i)
+#     sum+=i
+
+# if sum ==n:
+#   print("it is a perfect ")
+# else:
+#   print("it is not a perfect")
