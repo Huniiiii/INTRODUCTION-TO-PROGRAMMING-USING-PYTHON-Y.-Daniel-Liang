@@ -1,0 +1,72 @@
+radius = 20
+
+area =  radius * radius * 3.14159
+print (area)
+
+my_car = 2
+myCar = 2
+myNameIsHuni = 3
+
+#string = ("thanks","a","56789")
+
+# string + string = COncatrnation 
+# "a" + "b" ="ab"
+
+#string + number (int, float) = No!
+#print("a" + 4)
+
+#string * int =yes
+print("a" * 2)
+
+age = 18
+print("Hi, I'm", age, "yrs old.")
+
+age = "18"
+print("Hi, I'm " + age + " yrs old.")
+
+name = "Huni"
+age = 18
+print("Hello, my name is {} and I am {} years old".format(name, age))
+
+print(f"Hello, my name is {name} and I'm {age} years old")
+
+# print(f"The area for the circle of radius {radius} is {area}") 
+
+#Simultaneous Assignments
+x =1 
+y =1 
+temp = x
+x = y
+y = temp
+
+print(x,y)
+
+#########################
+a = 20
+b = 39
+a, b = b, a
+print(a, b)
+
+a = 5
+b =7
+a += b
+print(a)
+########################
+
+import time
+
+currentTime = time.time()
+
+print(currentTime)
+
+years = (currentTime /60 /60 /24 / 365)
+
+print(f"The years {years}")
+
+radius = int(input("Enter a value: "))
+area =  radius * radius * 3.14159
+print(f"The area for the circle of radius {radius} is {area}") 
+
+radius = eval(input("Enter a value: "))
+area =  radius * radius * 3.14159
+print(f"The area for the circle of radius {radius} is {area}") 
