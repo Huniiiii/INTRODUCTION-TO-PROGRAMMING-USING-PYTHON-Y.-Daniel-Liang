@@ -78,3 +78,97 @@ turtle.pendown()
 turtle.goto(50,-50)
 turtle.write("(50,-50)") #Q17
 
+
+import turtle as t
+
+# t.penup()
+# t.goto(40, -69.28)
+# t.pendown()
+# t.goto(-40, -69.28)
+# t.goto(-80, -9.8)
+# t.goto(-40, 69)
+# t.goto(40, 69)
+# t.goto(80,0)
+# t.goto(40,-69.28)
+
+# t.done() #Q19
+
+# t.left(90)
+# t.forward(60)
+# t.right(90)
+# t.forward(100)
+# t.right(90)
+# t.forward(60)
+# t.right(90)
+# t.forward(100)
+
+# t.right(135)
+# t.forward(50)
+# t.right(45)
+# t.forward(100)
+# t.right(135)
+# t.forward(50)
+
+# t.right(135)
+# t.forward(60)
+# t.right(45)
+# t.forward(50)
+# t.right(135)
+# t.forward(60)
+
+# t.right(90)
+# t.forward(100)
+# t.right(90)
+# t.forward(60)
+# t.right(90)
+# t.forward(100)
+# t.left(180)
+# t.forward(100)
+# t.left(45)
+# t.forward(50) #Q20
+
+
+# t.circle(50)
+# t.penup()
+# t.goto(0,50)
+# t.pendown()
+# t.forward (35)
+# t.left(180)
+# t.forward(65)
+# t.penup()
+# t.goto(0,50)
+# t.pendown()
+
+# t.right(90)
+# t.forward(35)
+# t.write("12")
+
+# t.penup()
+# t.goto(35,50)
+# t.write ("3")
+# t.pendown()
+
+# t.penup()
+# t.goto(-35,50)
+# t.write ("9")
+# t.pendown()
+
+# t.penup()
+# t.goto(0,0)
+# t.write ("6")
+# t.pendown()
+
+# t.done Q21
+
+# t.forward (100)
+# t.right(144)
+# t.forward (100)
+
+# t.right(144)
+# t.forward (100)
+
+# t.right(144)
+# t.forward (100)
+
+# t.right(144)
+# t.forward (100) #Q18
