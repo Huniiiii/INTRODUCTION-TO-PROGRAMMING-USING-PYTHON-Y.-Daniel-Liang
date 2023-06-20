@@ -1,0 +1,300 @@
+import random
+# times = eval(input("Enter the size for the matrix: "))
+times = 4
+
+matirx =[]
+
+for q in range(times):
+  g =[]
+  for i in range(times):
+    g.append(random.randint(0,1))
+  matirx.append(g)
+
+for i in range(times):
+  for j in range(times):
+    print(matirx[i][j], end ='')
+  print()
+
+
+# Check All 0s on rows
+for i in range(times):
+  sumNumber = 0
+  for j in range(times):
+    sumNumber+=matirx[i][j]
+  if sumNumber == 0:
+    print(f"All 0s on rows {i}")
+
+
+# Cehck All 1s on rows
+for i in range(times):
+  sumNumber = 0
+  for j in range(times):
+    sumNumber+=matirx[i][j]
+  if sumNumber == times:
+    print(f"All 1s on rows {i}")
+
+# print(sumNumber)
+
+for i in range(times):
+  sumNumber = 0
+  for j in range(times):
+    sumNumber += matirx[j][i]
+  if sumNumber == 0:
+    print(f"All 0s on column {i}")
+
+
+sumNumber = 0
+for j in range(times):
+  sumNumber += matirx[j][j]
+if sumNumber == 0:
+  print(f"major diagonal is exist")
+
+sumNumber = 0
+for j in range(times):
+  sumNumber += matirx[j][j]
+if sumNumber == times:
+  print(f"major diagonal is exist")
+
+sumNumber = 0
+for j in range(times):
+  k = j
+  sumNumber += matirx[j][k]
+  k -=1
+if sumNumber == 0:
+  print(f"opposite major diagonal is exist")
+
+sumNumber = 0
+for j in range(times):
+  k = j
+  sumNumber += matirx[k][k]
+if sumNumber == times:
+  print(f"opposite major diagonal is exist1")
+
+## Steve 
+# import random
+# # size = eval(input("Enter the size for the matrix: "))
+# size = 4
+
+# matrix = []
+# for i in range(size):
+#   row = []
+#   for j in range(size):
+#     row.append(random.randint(0,1))
+#   matrix.append(row)
+
+# for i in range(size):
+#   for j in matrix[i]:
+#     print(j, end ="")
+#   print()
+
+# print()
+
+# for i in range(size):
+#   if sum(matrix[i]) == 0:
+#     print(f"All 0s on row {i}")
+
+# for i in range(size):
+#   if sum(matrix[i]) == size:
+#     print(f"All 1s on row {i}")
+##Q28
+# m1 = input("Enter your m1: ").split(" ")
+# m2 = input("Enter your m2: ").split(" ")
+# # print(m1,m2)
+# if m1 == m2:
+#   print("The two lists are strictly identical")
+##Q29
+m1 = input("Enter your m1: ").split(" ")
+m2 = input("Enter your m2: ").split(" ")
+
+m1 = [int(x) for x in m1]
+m2 = [int(x) for x in m2]
+
+m1.sort()
+m2.sort()
+
+if m1 == m2:
+  print("The two lists are identical")
+
+##Q31
+
+##Q32
+
+# m = [
+#   [1,2,3,4],
+#   [5,6,7,8],
+#   [9,10,11,12],
+# ]
+
+
+# print(len(m[0])) ##column
+# print(len(m))##row
+
+# m = [
+#   [],
+#   [],
+#   [],
+# ]
+
+# # def sumColumn(m,columnIndex):
+# for row in range(3):
+#   value = input(f"Enter a 3-by-4 matrix row for row {row}: ").split(" ")
+#   value = [int(i) for i in value]
+#   m[row].append(value)
+
+# print(m)
+
+
+# matrix = [[],[],[]]
+# matrix[0].append(input('Enter a 3-by-4 matrix row for row 0:'))
+# matrix[1].append(input('Enter a 3-by-4 matrix row for row 1:'))
+# matrix[2].append(input('Enter a 3-by-4 matrix row for row 2:'))
+
+
+####Q1
+# matrix = []
+# for i in range(3):
+#   row = input(f"Enter a 3-by-4 matrix row {i}: ").split(" ")
+#   row = [float(num) for num in row]
+#   matrix.append(row)
+
+# print(matrix)
+
+# def sumColumn(matrix, columIndex):
+#   sumNum = 0
+#   for i in range(3):
+#     sumNum += matrix[i][columIndex]
+  
+#   return sumNum
+
+# print(sumColumn(matrix, 0))
+
+
+####Q2
+# m = []
+# for i in range(4):
+#   row = input(f"Enter a 4-by-4 matrix row for row{i+1}: ").split(" ")
+#   row = [eval(huni) for huni in row]
+#   m.append(row)
+
+# print(m)
+
+
+# def sumMajorDiagonal(m):
+#   sumNum = 0
+#   for i in range(4):
+#     sumNum += m[i][i]
+#   return sumNum
+
+
+# print(sumMajorDiagonal(m))
+
+
+
+##########Q4
+# table = [
+#          [2, 4, 3, 4, 5, 8, 8], 
+#          [7, 3, 5, 3, 3, 4, 4], 
+#          [3, 3, 4, 3, 3, 2, 2], 
+#          [9, 3, 4, 7, 3, 4, 1], 
+#          [3, 5, 4, 3, 6, 3, 8], 
+#          [3, 4, 4, 6, 3, 4, 4], 
+#          [3, 7, 4, 8, 3, 8, 4], 
+#          [6, 3, 5, 9, 2, 7, 9]
+#         ]
+
+
+
+# for i in range(8):
+#   sumNum = 0
+#   for j in range(7):
+#     sumNum += table[i][j]
+#   print(f"employee{i}, is {sumNum}")
+
+
+# ##Q4
+# for i in range(len(table)):
+#   print(f"Employee {i}'s total hour is {sum(table[i])}")
+
+# huniList = []
+
+# for i in range(len(table)):
+#   huniList.append(sum(table[i]))
+
+# employee = {}
+# for i in range(len(huniList)):
+#   employee[huniList[i]] = f"employee_{i}"
+
+# huniList = sorted(huniList, reverse = True)
+
+# for i in range(len(huniList)):
+#   a = huniList[i]
+#   print(f"{employee[a]}: {a} hours")
+
+# employees = {}
+
+# employees["employee_1"] = 30
+# employees["employee_2"] = 20
+
+# print(employees)
+
+####Q5
+def addMatrix():
+  matrix = []
+  numbers = input(f'Enter matrix: ').split(" ")
+  numbers = [eval(number) for number in numbers]
+  for i in range(3):
+    row = []
+    for j in range(3*i, 3*i + 3):
+      row.append(numbers[j])
+    matrix.append(row)
+  return matrix  
+
+matrix1 = addMatrix()
+matrix2 = addMatrix()
+print(matrix1)
+print(matrix2)
+
+matrix3 = []
+print("The matrices are added as follows:")
+
+for i in range(3):
+  for j in range(len(matrix1)):
+    print(matrix1[i][j], end =" ")
+  if i == 1:
+    print("  +  ", end="")
+  else:
+    print("     ", end="")
+  for k in range(len(matrix2)):
+    print(matrix2[i][k], end = " ") 
+  if i == 1:
+    print("  =  ", end="")
+  else:
+    print("     ", end="")
+  for f in range(len(matrix1)):
+    print(matrix1[i][f] + matrix2[i][f], end = " ")
+
+  print()
+
+
+# 1 2 3 4 5 6 7 8 9
+# 9 8 7 6 5 4 3 2 1
+
+# row1 = numbers[:3]
+# row2 = numbers[3:6]
+# row3 = numbers[6:]
+
+# matrix1.append(row1)
+# matrix1.append(row2)
+# matrix1.append(row3)
+
+#######################
+# matrix1.append(row1)
+# row2 = input(f'Enter matrix 2: ')
+# matrix2.append(row2)
+
+# print(matrix1)
+
+# for i in range(3):
+#   for j in range(3):
+#     matrix1[i],[j] + matrix1[i+1],[j+1]
+# # Study hard
