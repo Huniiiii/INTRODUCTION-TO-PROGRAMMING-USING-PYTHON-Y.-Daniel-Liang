@@ -1,0 +1,80 @@
+print ("Welcome to Python\nWelcome to Computer Science\nProgramming is fun.") #Q1
+
+print("Welcome to Python\n" *5) #Q2
+
+print((9.5 * 4.5 - 2.5 * 3) / (45.5 - 3.5)) #Q5
+
+mile = 14 * 1.6
+hours = 45.5 / 60
+print(mile/hours) #Q10
+
+pop_current = 312_032_486
+years = 365 * 24 * 60 * 60
+print (years)
+
+birth = years//7
+
+death = years//13
+
+newImmigrant = years //45
+
+change = birth - death + newImmigrant
+print (pop_current + 5 * change) #Q 11
+
+import turtle
+
+# turtle.forward(50)
+# turtle.left(90)
+# turtle.forward(50)
+# turtle.left(90)
+# turtle.forward(100)
+# turtle.left(90)
+# turtle.forward(100)
+# turtle.left(90)
+# turtle.forward(100)
+# turtle.left(90)
+# turtle.forward(50)
+# turtle.penup()
+# turtle.goto(0,50)
+# turtle.pendown()
+# turtle.left(180)
+# turtle.forward(100)
+# turtle.penup()
+# turtle.goto(0,0)
+# turtle.pendown()
+# turtle.right(90)
+# turtle.forward(50)
+
+# turtle.done #Q12
+
+turtle.circle(50)
+turtle.circle(-50)
+turtle.penup()
+turtle.goto(50,50)
+turtle.pendown()
+turtle.right(90)
+turtle.circle(50)
+turtle.penup()
+turtle.goto(100,0)
+turtle.pendown()
+turtle.right(90)
+turtle.circle(50)
+turtle.penup()
+turtle.goto(50,0)
+turtle.pendown()
+turtle.left(90)
+
+turtle.done #Q16
+
+###import turtle as t ###
+###t.circle (50)###
+
+turtle.color ("red")
+turtle.penup()
+turtle.goto(-39,48)
+turtle.write("(-39,48)")
+turtle.pendown()
+
+turtle.goto(50,-50)
+turtle.write("(50,-50)") #Q17
+
