@@ -1,0 +1,548 @@
+from tkinter import *
+
+
+# window = Tk()
+# label = Label(window, text = "Welcome to Python")
+# button = Button(window, text = "Click Me")
+
+# label.pack()
+# button.pack()
+
+# window.mainloop()
+
+#####################
+
+# def processOK():
+#   print("OK button is clicked")
+
+# def processCancel():
+#   print("Cancel button is clicked")
+
+# window = Tk()
+
+# btOK = Button(window, text = "OK", fg = "red", command = processOK)
+
+# btCanel = Button(window, text = "Cancel", bg = "yellow", command = processCancel)
+
+# btOK.pack()
+# btCanel.pack()
+# window.mainloop()
+
+
+################################
+# class ProcessButtonEvent:
+#   def __init__(self):
+#     window = Tk()
+
+#     asOk = Label(window, text = "Is Huni handsome? ")
+#     btOK = Button(window, text = "Yes", fg = "red", command = self.processOK)
+
+#     btCanel = Button(window, text = "YES!", bg = "yellow", command = self.processCancel)
+
+#     asOk.pack()
+#     btOK.pack()
+#     btCanel.pack()
+
+#     window.mainloop()
+  
+#   def processOK(self):
+#     print("OK button is clicked")
+
+#   def processCancel(self):
+#     print("Cancel button is clicked")
+
+# ProcessButtonEvent()
+
+####################
+
+# window = Tk()
+
+# chkBt = Label(window, text = "??")
+# chkBt.pack()
+
+# btShowOrHide = Button(window, text = "Show", bg = "white")
+
+# btShowOrHide["text"] = "Hide"
+# btShowOrHide["bg"] = "yellow"
+# btShowOrHide["cursor"] = "plus"
+
+# chkBt.pack()
+# btShowOrHide.pack()
+# window.mainloop
+
+#################################### listing 9.4
+
+# class WidgetsDemo:
+#   def __init__(self):
+#     window = Tk()
+#     window.title("Widgets Demo")
+
+#     frame1 = Frame(window)
+#     frame1.pack()
+#     self.v1 = IntVar()
+
+#     cbtBold = Checkbutton(frame1, text = "Bold", variable = self.v1, command = self.processCheckbutton)
+
+#     self.v2 = IntVar()
+
+#     reRed = Radiobutton(frame1, text = "Red", bg = "red", variable = self.v2, value = 1, command = self.porcessRadiobutton)
+
+#     reYellow = Radiobutton(frame1, text = "Yellow", bg = "yellow", variable = self.v2, value = 2, command = self.porcessRadiobutton)
+
+#     cbtBold.grid(row=1, column=1)
+#     reRed.grid(row=1, column=2)
+#     reYellow.grid(row=1,column=3)
+
+
+#     frame2 = Frame(window)
+#     frame2.pack()
+
+#     label = Label(frame2, text = "Enter your name: ")
+#     self.name = StringVar()
+#     entryName = Entry(frame2, textvariable = self.name)
+#     btGetName = Button(frame2, text = "Get Name", command = self.processButton)
+#     message = Message(frame2, text = "It is a widgets demo")
+
+#     label.grid(row =1, column =1)
+#     entryName.grid(row=1,column =2)
+#     btGetName.grid(row=1,column=3)
+#     message.grid(row=1,column=4)
+
+    
+#     frame3 = Frame(window)
+#     frame3.pack()
+#     text = Text(frame3)
+#     text.pack()
+#     text.insert(END, "Blah Blah")
+    
+    
+#     window.mainloop()
+
+#   def processCheckbutton(self):
+#     print("Check button is " + ("checked" if self.v1.get() == 1 else "Unchecked"))
+
+#   def porcessRadiobutton(self):
+#     print(("Red" if self.v2.get() == 1 else "Yellow") + " is selected")
+
+#   def processButton(self):
+#     print("Your name is " + self.name.get())
+
+# WidgetsDemo()
+
+#################################### listing 9.5
+
+class ChangeLableDemo:
+  def __init__(self):
+    window = Tk()
+    window.title("Change Label Demo")
+
+    frame1 = Frame(window)
+    frame1.pack()
+    self.lbl = Label(frame1, text = "Programming is fun")
+    self.lbl.pack()
+
+    frame2 = Frame(window)
+    frame2.pack()
+    label = Label(frame2, text = "Enter text: ")
+    self.msg = StringVar()
+    entry = Entry(frame2, textvariable = self.msg)
+    btChangeText = Button(frame2, text = "Change Text", command = self.processButton)
+    self.v1 = StringVar()
+    rbRed =  Radiobutton(frame2, text = "Red", bg = "red", variable = self.v1, value = "R", command = self.processRadioubutton)
+    rbYellow =  Radiobutton(frame2, text = "Yellow", bg = "yellow", variable = self.v1, value = "Y", command = self.processRadioubutton)
+
+    label.grid(row = 1, column = 1)
+    entry.grid(row = 1, column = 2)
+    btChangeText.grid(row = 1, column = 3)
+    rbRed.grid(row = 1, column = 4)
+    rbYellow.grid(row = 1, column = 5)
+
+    window.mainloop()
+
+  def processRadioubutton(self):
+    if self.v1.get() == "R":
+      self.lbl["fg"] = "red"
+    elif self.v1.get() == "Y":
+      self.lbl["fg"] = "yellow"
+
+  def processButton(self):
+    self.lbl["text"] = self.msg.get()
+
+ChangeLableDemo()
+
+
+from tkinter import *
+
+# class CanvasDemo:
+#   def __init__(self):
+#     window = Tk()
+#     window.geometry("500x300")
+#     window.title("Canvas Demo")
+
+#     self.canvas = Canvas(window, width = 200, height = 100, bg = "white")
+#     self.canvas.pack()
+
+#     frame = Frame(window)
+#     frame.pack()
+#     btRectangle = Button(frame, text = "Rectangle", height=1, command = self.displayRect)
+
+#     btOval = Button(frame, text = "Oval",command = self.displayOval)
+#     btArc = Button(frame, text = "Arc", command = self.displayArc)
+#     btPolygon = Button(frame, text = "Polygon", command = self.displayPolygon)
+#     btLine = Button(frame, text = "Line", command = self.displayLine)
+#     btString = Button(frame, text = "String", command = self.displayString)
+#     btClear = Button(frame, text = "Clear", command = self.clearCanvas)
+
+#     btRectangle.grid(row = 1, column =1)
+#     btOval.grid(row = 1, column =2)
+#     btArc.grid(row = 1, column =3)
+#     btPolygon.grid(row = 1, column =4)
+#     btLine.grid(row = 1, column =5)
+#     btString.grid(row = 1, column =6)
+#     btClear.grid(row = 1, column =7)
+#     window.mainloop()
+
+#   def displayRect(self):
+#     self.canvas.create_rectangle(10,10,190,90,tags = "rect")
+
+#   def displayOval(self):
+#     self.canvas.create_oval(10,10,190,90,fill = "red", tags = "oval")
+
+#   def displayArc(self):
+#     self.canvas.create_arc(10,10,190,90,start = 0, extent = 90, width = 8, fill = "red", tags = "arc")
+
+#   def displayPolygon(self):
+#     self.canvas.create_polygon(10,10,190,90,30,50,tags = "polygon")
+
+#   def displayLine(self):
+#     self.canvas.create_line(10,10,190,90,fill = "red", tags = "polygon")
+#     self.canvas.create_line(10,90,190,10,width = 9,arrow ="last", activefill = "blue",tags = "line")
+
+#   def displayString(self):
+#     self.canvas.create_text(60,40,text = "Hi, I am a string", font = "Times 10 bold underline", tags = "string")
+
+#   def clearCanvas(self):
+#     self.canvas.delete("rect", "oval","arc","polygon","line","string")
+
+# CanvasDemo()
+
+
+
+##################9.7
+
+
+# class GridManagerDemo:
+#   window = Tk()
+#   window.title("Grid Manager Demo") 
+
+#   message = Message(window, text = "This Message widget occupies three rows and two columns")
+#   message.grid(row = 1, column = 1, rowspan= 3, columnspan = 2)
+#   Label(window, text = "First Name:").grid(row = 1, column = 3)
+#   Entry(window).grid(row = 1, column = 4, pady = 5)
+#   Label(window, text = "Last Name:").grid(row = 2, column = 3)
+#   Entry(window).grid(row = 2, column = 4)
+#   Button(window, text = "Get Name").grid(row = 3, padx = 5, pady = 5, column = 4, sticky = E)
+
+#   window.mainloop() 
+
+# GridManagerDemo()
+
+####################9.8
+# class PackManagerDemo:
+#   def __init__(self):
+#     window = Tk()
+#     window.title("Pack Manager Demo 1")
+
+#     Label(window, text = "Blue", bg = "blue").pack()
+#     Label(window, text = "Red", bg = "red").pack(fill = BOTH, expand = 1)
+#     Label(window, text ="Green", bg = "green").pack(fill = BOTH)
+
+#     window.mainloop()
+
+# PackManagerDemo()
+
+
+###############Question 9.2
+# class HandsomeHuni:
+#   def __init__(self):
+#     window = Tk()
+#     frame = Frame(window)
+#     frame.pack()
+
+#     window.title("Investment Calculator")
+#     self.investment = IntVar()
+#     self.investment.set(10)
+    
+#     Steve= Label(frame, text ='Investment Amount: ')
+#     Steve.grid(row = 1, column = 1,sticky = W)
+
+#     Entry(frame, textvariable = self.investment).grid(row = 1,column =2)
+    
+#     self.years = IntVar()
+    
+#     Label(frame, text ='Years: ').grid(row = 2, column = 1,sticky = W)
+
+#     Entry(frame,textvariable = self.years).grid(row = 2,column =2)
+#     self.annual = IntVar()
+
+#     Label(frame, text ='Annual : ').grid(row = 3, column = 1,sticky = W)
+
+#     Entry(frame,textvariable = self.annual).grid(row = 3,column =2)
+    
+#     self.future = IntVar()
+    
+#     self.mylbl = Label(frame, text ='Future Value: ')
+#     self.mylbl.grid(row = 4, column = 1,sticky = W)
+    
+#     self.huni = Label(frame, text = "-")
+#     self.huni.grid(row = 4,column =2)
+
+#     Button(frame, text="Calculate", fg ="white",bg="green", command = self.futureValue).grid(row = 5, column = 2)
+
+
+#   def futureValue(self):
+#     futureValue = int(self.investment.get()) * (1+ int(self.annual.get())/12) ** int(self.years.get())*12
+#     self.huni["text"] = str(futureValue)
+    
+# HandsomeHuni()
+
+############################
+# class Login:
+#   def __init__(self):
+#     window = Tk()
+#     window.title("Welcome to Canada")
+
+#     uLabel = Label(window, text = "Username:")
+#     pLabel = Label(window, text = "Passowrd:")
+
+#     self.username = StringVar()
+#     uEntry = Entry(window, textvariable = self.username, width=10)
+    
+#     self.passowrd = StringVar()
+#     pEntry = Entry(window, textvariable =self.passowrd, width=10)
+
+#     self.textLabel = Label(window, text = "")
+
+#     userB = Button(window, text = "Enter",command = self.checkUser)
+     
+#     uLabel.place(x=10, y=10)
+#     pLabel.place(x=10, y=30)
+#     uEntry.place(x=90, y=10)
+#     pEntry.place(x=90, y =30)
+#     self.textLabel.place(x=10, y=70)
+#     userB.place(x=120, y=100)
+
+#     window.mainloop()
+  
+#   def checkUser(self):
+#     if self.username.get() == "huni" and self.passowrd.get() == "123":
+#       self.textLabel["text"] = "Welcome"
+#       self.textLabel["fg"] = "green"
+#     else:
+#       self.textLabel["text"] = "F**k off"
+#       self.textLabel["fg"] = "red"
+      
+# Login()
+
+
+
+#####################9.3
+# class Draw:
+#   def __init__(self):
+#     window = Tk()
+#     window.title("HELLO WORLD")
+
+#     self.canvas = Canvas(window, width = 200, height = 100, bg = 'white')
+#     self.canvas.pack()
+
+#     frame = Frame(window)
+#     frame.pack()
+
+#     self.v1 = StringVar()
+#     rectangle = Radiobutton(frame, text = "Rectangle", variable = self.v1, command = self.draw, value = '1')
+
+#     oval = Radiobutton(frame, text = "Oval", variable = self.v1, command = self.draw, value = '2')
+    
+#     self.v2 = IntVar()
+#     fill = Checkbutton(frame, variable = self.v2, text = "Filled", command=self.draw)
+
+#     rectangle.grid(row = 4, column = 2)
+#     oval.grid(row = 4, column = 3)
+#     fill.grid(row = 4, column = 4)
+
+#     window.mainloop()
+
+#   def draw(self):
+#     self.canvas.delete("rect", "oval")
+    
+#     if self.v1.get() == '1':
+#       if self.v2.get() == 0:
+#         self.canvas.create_rectangle(10,10,190,90, tags ='rect')
+#       else:
+#         self.canvas.create_rectangle(10,10,190,90, tags ='rect', fill="red")
+#     else:
+#       if self.v2.get() == 0:
+#         self.canvas.create_oval(10,10,190,90, tags ='oval')
+#       else:
+#         self.canvas.create_oval(10,10,190,90, tags ='oval', fill="red")
+
+# Draw()
+
+
+##################################9.4
+# class Draw:
+#   def __init__(self):
+#     window = Tk()
+#     window.title("Display Rectangles")
+
+#     frame = Frame(window)
+#     frame.pack()
+
+#     canvas = Canvas(frame, width = 300, height = 200, bg = 'white')
+    
+#     canvas.pack()
+
+#     x1 = 10
+#     x2 = 290
+#     y1 = 10
+#     y2 = 190
+#     for i in range(20):
+#       canvas.create_rectangle(x1,y1,x2,y2, tags ='rect')
+      
+#       x1 = x1+4
+#       x2 = x2-4
+#       y1= y1+4
+#       y2 = y2-4
+
+#     window.mainloop()
+
+# Draw()
+    
+        
+
+
+###########################
+from tkinter import *
+##########################95
+# class Question95:
+#   def __init__(self):
+#     window = Tk()
+#     window.title("Displaying a Checkerboard")
+
+#     frame = Frame(window)
+#     frame.pack()
+
+#     canvas = Canvas(window, width = 200, height = 200,bg="white")
+#     canvas.pack()
+
+#     x1=0
+#     y1=0
+#     x2=25
+#     y2=25
+
+#     for i in range(8):
+#       for j in range(8):
+#         canvas.create_rectangle(x1,y1,x2,y2)
+#         print(f'row {i}, {j}')
+#         if i%2 ==0 and j %2 !=0:
+#           canvas.create_rectangle(x1,y1,x2,y2, fill = 'black')
+#         elif i%2!=0 and j%2 ==0:
+#           canvas.create_rectangle(x1,y1,x2,y2, fill = 'black')
+#         x1=x1+25
+#         x2=x2+25
+#       y1=y1+25
+#       y2=y2+25
+#       x1=0
+#       x2=25
+
+#     window.mainloop()
+
+
+# Question95()
+
+################Q9.7
+# class Question97:
+#   def __init__(self):
+#     window = Tk()
+#     window.title("Question9.7")
+
+#     frame = Frame(window)
+#     frame.pack()
+
+#     canvas = Canvas(window, width = 300, height = 300, bg ='white')
+#     canvas.pack()
+
+#     x1=0
+#     x2=300
+#     y1=20
+#     y2=20
+#     for i in range(14):
+#       canvas.create_line(x1,y1,x2,y2, fill = 'blue')
+#       y1+=20
+#       y2+=20
+    
+#     x1=20
+#     x2=20
+#     y1=0
+#     y2=300
+#     for i in range(14):
+#       canvas.create_line(x1,y1,x2,y2,fill = 'red')
+#       x1+=20
+#       x2+=20
+
+#     window.mainloop()
+
+# Question97()
+
+
+class Question925:
+  def __init__(self):
+    window = Tk()
+
+    frame = Frame()
+
+    canvas = Canvas(window, width = 200, height = 200, bg ='white' )
+    canvas.pack()
+
+    x1=60
+    x2=140
+    y1=10
+    y2=190
+    canvas.create_rectangle(x1,y1,x2,y2)
+
+    canvas.create_oval(75,20, 125, 70)
+    canvas.create_oval(75,75, 125, 125)
+    canvas.create_oval(75,130, 125, 180)
+    # canvas.create_oval(50,5, 150,70)
+    # canvas.create_oval(50,70, 150, 136)
+    # canvas.create_oval(50,137, 150, 195)
+
+    self.v1 = StringVar()
+
+    red = Radiobutton(frame, text = 'red',variable = self.v1,value = '0',command = self.display1)
+
+    yellow = Radiobutton(frame, text = 'yellow',variable = self.v1,value = '1',command = self.display1)
+
+    green = Radiobutton(frame, text = 'green',variable = self.v1,value = '2',command = self.display1)
+
+    red.grid(row=1,column=1)
+    yellow.grid(row=1,column=2)
+    green.grid(row=1,column=3)
+    frame.pack()
+    window.mainloop()
+    
+
+
+  def display1(self):
+    self.canvas.delete('red','yellow','green')
+
+    if self.v1.get()=='0':
+      self.canvas.create_oval(window,75,20, 125, 70, fill = 'red',tags = 'red')
+    elif self.v1.get()=='1':
+      self.canvas.create_oval(window,75,75, 125, 125, fill = 'yellow',tags='yellow')
+    else:
+      self.canvas.create_oval(window,75,130, 125, 180, fill = 'green',tags='green')
+
+
+
+Question925()
