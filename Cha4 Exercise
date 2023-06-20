@@ -1,0 +1,107 @@
+# print(4 < 2)
+
+# import random
+# print(random.randint(0,9))
+
+number1 = 7
+# a = input("what is", number1)
+
+
+# print("waht is", number1)
+
+# number1 = random.randint(0,9)
+# number2 = random.randint(0,9)
+
+# answer = eval(input(str(number1) + " + " + str(number2) + "?"))
+# print(number1, "+", number2, "=", answer, "is", number1 + number2 == answer)
+
+
+# number = eval(input(" number?"))
+
+# if number % 2 == 0:
+#   print("Even")
+
+# elif number % 5 ==0:
+#   print("Odd five !")
+
+# else:
+#   print("Odd")
+
+
+##### and // or ######
+# number = eval(input(" number?"))
+
+# if number % 2 != 0 and number % 5 == 0:
+#   print("odd - Five !")
+
+
+
+# number1 = eval(input(" "))
+# number2 = eval(input(" "))
+# number3 = eval(input(" "))
+# number4 = eval(input(" "))
+
+# if (number1 == 8 or number1 == 9) and (number4 == 8 or number4 == 9) and (number2 == number3):
+#   print("Ingonre")
+
+# else:
+#   print("Answer") #Q 1 (juniorEF)
+
+
+# x = eval(input())
+# y = eval(input())
+
+# if x>0 and y>0:
+#   print(1)
+
+# elif x<0 and y>0:
+#   print(2)
+
+# elif x<0 and y<0:
+#   print(3)
+
+# else:
+#   print(4) #Q 2 (juniorEF)
+
+
+# ang1 = eval(input())
+# ang2 = eval(input())
+# ang3 = eval(input())
+
+# if ang1 == ang2 == ang3 == 60:
+#   print("Equilateral")
+
+# elif (ang1 + ang2 +ang3 == 180) and (ang1 == ang2 or ang2 == ang3):
+#   print("Isosceles")
+
+# elif (ang1 + ang2 +ang3 == 180) and (ang1 != ang2 or ang2 != ang3):
+#   print("Scalene")
+
+# else:
+#   print("Error") #Q3(juniorEF)
+
+
+speedLimit = eval(input("Enter the speed limit: "))
+recorded = eval(input("Enter the recorded speed of the car: "))
+
+if speedLimit < recorded :
+  if 1 <= speedLimit - recorded <=20:
+    print("You are speeding and your fine is $100" )
+  elif 21 <= speedLimit - recorded <= 30:
+      print("You are speeding and your fine is $270")
+  else:
+      print("You are speeding and your fine is $500")
+else:
+  print("Congratulations, you are within the speed limit!") #Q5(juniorEF)
+  
+ a = eval(input())
+
+if a%2==0:
+  print("even")
+else:
+  print("odd")
+
+print("even" if a % 2 ==0 else "odd")  ##Other
+
+print(True and True)
+print(True or False)
