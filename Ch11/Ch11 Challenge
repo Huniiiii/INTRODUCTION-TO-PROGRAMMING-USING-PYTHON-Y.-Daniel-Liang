@@ -1,0 +1,59 @@
+# # Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
+
+# # You may assume that each input would have exactly one solution, and you may not use the same element twice.
+
+# # You can return the answer in any order.
+
+
+# # Input: nums = [2,7,11,15], target = 9
+# # Output: [0,1]
+
+# #input : 2,7,11,15
+# #input: 9
+
+# nums = input("Enter yout list: ").split(",")
+# nums = [int(x.strip(' ')) for x in nums]
+# print(nums)
+
+# target = int(input("What is your target?: "))
+
+# for i in range(len(nums)):
+#   for j in range(len(nums)):
+#     if nums[i]+nums[j]==target:
+#       # print(nums[i],nums[j])
+#       print([i,j])
+#       break
+#   break
+
+# # nums = [int(nums1) for nums1 in nums]
+
+# # print(nums)
+
+#Q2
+# Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
+
+# An input string is valid if:
+
+# Open brackets must be closed by the same type of brackets.
+# Open brackets must be closed in the correct order.
+
+# Input: s = "()"
+# Output: true
+
+# Input: s = "()[]{}"
+# Output: true
+
+# Input: s = "(]"
+# Output: false
+
+# Input: s = "([)]"
+# Output: false
+
+# Input: s = "{[]}"
+# Output: true
+
+# s = input("Enter your symbols: ")
+
+# if "()" in s:
+#   print("True")
+
